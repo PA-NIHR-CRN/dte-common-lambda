@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+        <RepositoryUrl>https://github.com/nihr-interoperability-platform/dte-common-lambda</RepositoryUrl>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Amazon.Lambda.CloudWatchEvents" Version="4.0.0" />
+        <PackageReference Include="Amazon.Lambda.CognitoEvents" Version="2.0.0" />
+        <PackageReference Include="Amazon.Lambda.Core" Version="2.1.0" />
+        <PackageReference Include="Amazon.Lambda.Logging.AspNetCore" Version="3.1.0" />
+        <PackageReference Include="Amazon.Lambda.SQSEvents" Version="2.1.0" />
+        <PackageReference Include="AWSSDK.Core" Version="3.7.6.4" />
+        <PackageReference Include="AWSSDK.Extensions.NETCore.Setup" Version="3.7.1" />
+        <PackageReference Include="AWSSDK.SecretsManager" Version="3.7.2.2" />
+        <PackageReference Include="AWSSDK.SQS" Version="3.7.2.18" />
+        <PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="6.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="6.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="6.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="6.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="6.0.0" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Logging" Version="6.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Options" Version="6.0.0" />
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    </ItemGroup>
+
+</Project>

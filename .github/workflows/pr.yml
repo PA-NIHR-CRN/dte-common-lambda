@@ -1,0 +1,35 @@
+name: PR Build & Test
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build_test_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 3.1.200
+
+      - name: Install dependencies
+        run: dotnet restore
+
+      - name: Build
+        run: dotnet build --configuration Release --no-restore
+
+      - name: Test
+        run: dotnet test --no-restore --verbosity normal
+
+      - name: GetVersion
+        id: version
+        uses: battila7/get-version-action@v2
+
+      - name: Dotnet Nuget pack
+        run: dotnet pack --configuration Release --output . --include-source -p:PackageID=Dte.Common.Lambda -p:PackageVersion=$(date +'%Y%m%d.%H%M%S')-preview
+
+      - name: Dotnet Nuget push
+        run: dotnet nuget push *.nupkg --api-key ${{ secrets.NUGET_DTE_TOKEN }} --source https://nuget.pkg.github.com/nihr-interoperability-platform/index.json
