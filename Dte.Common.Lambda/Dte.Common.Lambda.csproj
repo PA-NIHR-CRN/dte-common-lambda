@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <TargetFramework>netstandard2.1</TargetFramework>
-        <RepositoryUrl>https://github.com/nihr-interoperability-platform/dte-common-lambda</RepositoryUrl>
+        <RepositoryUrl>https://github.com/pa-nihr-crn/dte-common-lambda</RepositoryUrl>
     </PropertyGroup>
 
     <ItemGroup>

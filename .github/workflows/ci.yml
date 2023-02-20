@@ -35,4 +35,4 @@ jobs:
         run: dotnet pack --configuration Release --output . --include-source -p:PackageID=Dte.Common.Lambda -p:PackageVersion=${{ steps.version.outputs.version-without-v }}
       
       - name: Dotnet Nuget push
-        run: dotnet nuget push *.nupkg --api-key ${{ secrets.NUGET_DTE_TOKEN }} --source https://nuget.pkg.github.com/nihr-interoperability-platform/index.json
+        run: dotnet nuget push *.nupkg --api-key ${{ secrets.NUGET_PACKAGE_TOKEN }} --source https://nuget.pkg.github.com/pa-nihr-crn/index.json --skip-duplicate
