@@ -18,7 +18,7 @@ Follow these steps to set up and run the DTE Common Lambda project locally:
 1. Ensure you have the .NET SDK installed on your machine. If not, download and install it from the .NET official website.
 2. Clone the repository to your local machine:
     ```bash
-    git clone https://github.com/yourusername/dte-common-lambda.git
+    git clone https://github.com/PA-NIHR-CRN/dte-common-lambda.git
     ```
 3. Navigate to the project folder:
     ```bash
