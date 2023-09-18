@@ -5,6 +5,6 @@ namespace Dte.Common.Lambda.Contracts
 {
     public interface IHandler<in TMessage, TResponse>
     {
-        Task<TResponse> HandleAsync(TMessage source, CancellationToken? cancellationToken = default);
+        Task<TResponse> HandleAsync(TMessage source, CancellationToken cancellationToken = default);
     }
 }
