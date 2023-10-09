@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Text.Json.Serialization;
 
 namespace Dte.Common.Lambda.Events
@@ -52,6 +53,9 @@ namespace Dte.Common.Lambda.Events
 
         [JsonPropertyName("usernameParameter")]
         public object UsernameParameter { get; set; }
+        
+        [JsonPropertyName("clientMetadata")]
+        public IDictionary<string, string> ClientMetadata { get; set; }
     }
 
     public class UserAttributes
